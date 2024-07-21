@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="h1 text-center mt-5" style="color:#3c096c;">Enter Card Details</div>
+<div class="container mb-5">
+  <form action="{{url_for('views.charge')}}"  method="POST" id="payment-form"  class="form-group">
+    <input type="text" name="cus_name" id="cus_name" required minlength="2" placeholder="Full Name" class="form-control mt-2">
+    <input type="text" name="amount" id="amount" required minlength="2" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ?
+     null : event.charCode >= 48 && event.charCode <= 57"  placeholder="Amount" class="form-control  mt-2">
+    <textarea name="message" id="message" required minlength="2" rows="5" placeholder="Donation Message" class="form-control mt-2"></textarea>
+    <input type="email" name="mail" id="mail" required minlength="2" placeholder="E-mail" class="form-control mt-2">
+    <div class="form-row">
+      <div id="card-element" class="payment mt-2">
+        <!-- A Stripe Element will be inserted here. -->
+        </div>
+      
+        <!-- Used to display form errors. -->
+      <div id="card-errors" role="alert"></div>
+        </div>
+      <br>
+      <button class="btn btn-outline-payment" onsubmit="return check()" >Submit Payment</button>
+    
+    </form>
+</div>
+{% endblock %}

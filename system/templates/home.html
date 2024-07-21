@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<div class="bg-image position-relative mt-5 mb-1">
+    <img src="{{ url_for('static', filename='img/bg.jpg')}}" width="100%" alt="charity">
+    <h1 class="centered">Small Contibutions Towards Big Changes</h1>
+    <div class="mask position-absolute top-0 end-0 bottom-0 start-0 " style="background-color: hsla(349, 94%, 58%, 0.6)"></div>
+</div>
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="trend">
+    <div class="container">
+        <h3 class="pt-3">Ruvimbo Programme</h3>
+        <h2>Our aim is to support the deprived youth of Southern Africa</h2>
+
+        <div class="row">
+            <div class="col-4 ">
+                <img src="{{ url_for('static', filename='img/youth.jpg')}}" alt="charity" width="100%" style="margin-top:15px;">
+            </div>
+            <div class="col-8  text-justify pt-3">
+                <p>Feeding the homeless, supplying girls with sanitary products, advocating for mental health and providing basic necessities for young women and men. We are collecting donations of any kind including none perishable food products, be it feminine hygiene products, clothing, toys or cash donations.</p>
+                <p>Our key aspect is to provide accountability, trust, and transparency to every individual who has invested their time, donations and faith into the Ruvimbo Programme and is dedicated to the promotion of the general health and protection of the livelihood of the youths.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="container mt-3 pb-3 ">
+        <div class="row">
+            <div class="col-8 pt-3">
+                <p class="text-justify">In celebration of RUVIMBO PROGRAMME's 1 year anniversary, our team in South Africa decided to donate Bread and Sanity Pads to @dandelionlahh at their 2nd FEED MY COMMUNITY EVENT on the 6th of June whereby we fed 100 kids.
+                    The event was a success.</p>
+                <p class="text-justify">They are doing such a great job in different communities of South Africa and we are proud to support them in their mission.</p>
+                <button class="btn btn-outline-primary btn-lg" onclick="location.href='/payment'">Donate</button>
+            </div>
+            <div class="col-4">
+                <img src="{{ url_for('static', filename='img/hands.jpg')}}" alt="charity" width="100%" style="margin-top:15px;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------- -->
+
+
+{% endblock %}
